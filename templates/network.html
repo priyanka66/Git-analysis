@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+        <img src={{plot}}>
+<br><br>
+<h2>List of repositories of {{user}}</h2>
+<table style="text-align:center">
+        {% for repo in repositories %}
+           <tr style="border:5">
+              <td > <a href="{{url_for('eachrepo',reponame=repo.name,userName=user)}}">{{repo.name}}</a></td>
+           </tr>
+        {% endfor %}
+     </table>
+</body>
+</html>
